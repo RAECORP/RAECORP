@@ -1,0 +1,4667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RAECORP | International Property Solutions</title>
+
+    <meta name="description"
+          content="RAECORP connects property owners and sellers with a strong international network of qualified property buyers and partners. Safe, diligent and tailored property solutions.">
+
+    <meta name="keywords"
+          content="RAECORP, international property, global property, property management, sell property, off market property, property solutions">
+
+    <meta name="author"
+          content="RAECORP">
+
+    <meta name="theme-color"
+          content="#080808">
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RAECORP
+   GLOBAL PROPERTY SOLUTIONS
+===================================================== */
+
+:root {
+
+    --black: #070707;
+    --black-2: #0c0c0c;
+    --black-3: #111111;
+
+    --gold: #c7a45b;
+    --gold-light: #e3c889;
+    --gold-dark: #96763a;
+
+    --cream: #f4efe5;
+    --white: #ffffff;
+
+    --grey: #999999;
+    --grey-dark: #666666;
+
+    --border: rgba(199,164,91,0.25);
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--black);
+
+    color: var(--white);
+
+    font-family: "Inter", sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+button,
+input,
+textarea,
+select {
+
+    font-family: inherit;
+
+}
+
+
+/* =====================================================
+   PRELOADER
+===================================================== */
+
+.preloader {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    background: var(--black);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    transition: opacity 0.8s ease,
+                visibility 0.8s ease;
+
+}
+
+
+.preloader.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+.preloader-logo {
+
+    font-family: "Cormorant Garamond",
+                 serif;
+
+    font-size: 50px;
+
+    letter-spacing: 10px;
+
+    color: var(--gold);
+
+}
+
+
+.preloader-line {
+
+    width: 120px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin-top: 20px;
+
+    animation: loading 1.5s
+               infinite ease-in-out;
+
+}
+
+
+@keyframes loading {
+
+    0% {
+
+        transform: scaleX(0);
+
+        transform-origin: left;
+
+    }
+
+    50% {
+
+        transform: scaleX(1);
+
+        transform-origin: left;
+
+    }
+
+    100% {
+
+        transform: scaleX(0);
+
+        transform-origin: right;
+
+    }
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 25px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    transition:
+        background 0.4s ease,
+        padding 0.4s ease;
+
+}
+
+
+.navbar.scrolled {
+
+    background:
+        rgba(7,7,7,0.94);
+
+    backdrop-filter:
+        blur(18px);
+
+    border-bottom:
+        1px solid var(--border);
+
+    padding: 16px 5%;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.logo-symbol {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color: var(--gold);
+
+    font-size: 44px;
+
+    line-height: 1;
+
+}
+
+
+.logo-name {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color: var(--cream);
+
+    font-size: 22px;
+
+    letter-spacing: 7px;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.nav-links a {
+
+    font-size: 10px;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+
+    color: #ddd;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.nav-contact {
+
+    background:
+        var(--gold);
+
+    color:
+        #111 !important;
+
+    padding:
+        13px 20px;
+
+}
+
+
+.nav-contact:hover {
+
+    background:
+        var(--gold-light);
+
+}
+
+
+.menu-button {
+
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+
+.hero-video {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -3;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4,4,4,0.94),
+            rgba(4,4,4,0.65) 45%,
+            rgba(4,4,4,0.20)
+        );
+
+}
+
+
+.hero-bottom-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(7,7,7,1),
+            transparent 35%,
+            rgba(7,7,7,0.35)
+        );
+
+}
+
+
+.hero-content {
+
+    width: 90%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding-top: 70px;
+
+}
+
+
+.eyebrow {
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        5px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.hero h1 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-weight:
+        500;
+
+    text-transform:
+        uppercase;
+
+    font-size:
+        clamp(58px, 7vw, 112px);
+
+    line-height:
+        0.88;
+
+    max-width:
+        950px;
+
+}
+
+
+.hero h1 span {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.hero-description {
+
+    max-width:
+        620px;
+
+    margin-top:
+        32px;
+
+    color:
+        #d0d0d0;
+
+    line-height:
+        1.85;
+
+    font-size:
+        15px;
+
+    font-weight:
+        300;
+
+}
+
+
+.hero-buttons {
+
+    display:
+        flex;
+
+    gap:
+        15px;
+
+    flex-wrap:
+        wrap;
+
+    margin-top:
+        38px;
+
+}
+
+
+.btn {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        17px 27px;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1.8px;
+
+    text-transform:
+        uppercase;
+
+    border:
+        1px solid var(--gold);
+
+    transition:
+        0.35s ease;
+
+}
+
+
+.btn-primary {
+
+    background:
+        var(--gold);
+
+    color:
+        #101010;
+
+}
+
+
+.btn-primary:hover {
+
+    background:
+        var(--gold-light);
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.btn-outline {
+
+    color:
+        white;
+
+}
+
+
+.btn-outline:hover {
+
+    background:
+        rgba(199,164,91,0.12);
+
+}
+
+
+.hero-meta {
+
+    position:
+        absolute;
+
+    bottom:
+        35px;
+
+    left:
+        5%;
+
+    right:
+        5%;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        end;
+
+}
+
+
+.hero-scroll {
+
+    color:
+        #aaa;
+
+    font-size:
+        9px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        3px;
+
+}
+
+
+.scroll-line {
+
+    width:
+        90px;
+
+    height:
+        1px;
+
+    background:
+        var(--gold);
+
+    margin-top:
+        9px;
+
+}
+
+
+.hero-location {
+
+    color:
+        #aaa;
+
+    font-size:
+        9px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+/* =====================================================
+   VALUE STRIP
+===================================================== */
+
+.values {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    background:
+        var(--black-2);
+
+    border-top:
+        1px solid var(--border);
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.value {
+
+    padding:
+        55px 30px;
+
+    text-align:
+        center;
+
+    border-right:
+        1px solid var(--border);
+
+}
+
+
+.value:last-child {
+
+    border-right:
+        none;
+
+}
+
+
+.value-icon {
+
+    color:
+        var(--gold);
+
+    font-size:
+        28px;
+
+    margin-bottom:
+        17px;
+
+}
+
+
+.value h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        23px;
+
+    font-weight:
+        500;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.value p {
+
+    color:
+        var(--grey);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+.section {
+
+    padding:
+        120px 5%;
+
+}
+
+
+.section-label {
+
+    color:
+        var(--gold);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        4px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.section-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(43px,5vw,75px);
+
+    line-height:
+        0.98;
+
+    font-weight:
+        500;
+
+}
+
+
+.section-title span {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-section {
+
+    background:
+        var(--black);
+
+}
+
+
+.about-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        90px;
+
+    align-items:
+        center;
+
+}
+
+
+.about-image {
+
+    min-height:
+        620px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.08),
+            rgba(0,0,0,0.4)
+        ),
+        url("assets/property.jpg")
+        center/cover;
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.about-copy p {
+
+    color:
+        #999;
+
+    line-height:
+        1.9;
+
+    font-size:
+        13px;
+
+    margin-top:
+        28px;
+
+}
+
+
+.quote {
+
+    margin-top:
+        35px;
+
+    padding-left:
+        25px;
+
+    border-left:
+        2px solid var(--gold);
+
+    color:
+        var(--cream);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        27px;
+
+    line-height:
+        1.35;
+
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services-section {
+
+    background:
+        #0a0a0a;
+
+}
+
+
+.services-heading {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        end;
+
+    gap:
+        40px;
+
+    margin-bottom:
+        55px;
+
+}
+
+
+.services-heading p {
+
+    max-width:
+        470px;
+
+    color:
+        #888;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+
+}
+
+
+.services-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.service {
+
+    min-height:
+        400px;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid var(--border);
+
+    display:
+        flex;
+
+    align-items:
+        end;
+
+    padding:
+        32px;
+
+    transition:
+        0.5s ease;
+
+}
+
+
+.service::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            transparent 25%,
+            rgba(0,0,0,0.95)
+        );
+
+}
+
+
+.service:nth-child(1) {
+
+    background:
+        url("assets/property-marketing.jpg")
+        center/cover;
+
+}
+
+
+.service:nth-child(2) {
+
+    background:
+        url("assets/property-sourcing.jpg")
+        center/cover;
+
+}
+
+
+.service:nth-child(3) {
+
+    background:
+        url("assets/transaction.jpg")
+        center/cover;
+
+}
+
+
+.service:nth-child(4) {
+
+    background:
+        url("assets/advisory.jpg")
+        center/cover;
+
+}
+
+
+.service:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--gold);
+
+}
+
+
+.service-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+}
+
+
+.service-number {
+
+    color:
+        var(--gold);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        2px;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.service h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        30px;
+
+    font-weight:
+        500;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+.service p {
+
+    color:
+        #aaa;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* =====================================================
+   PROPERTY OPPORTUNITIES
+===================================================== */
+
+.properties {
+
+    background:
+        var(--black);
+
+}
+
+
+.properties-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        end;
+
+    margin-bottom:
+        55px;
+
+}
+
+
+.properties-intro {
+
+    max-width:
+        480px;
+
+    color:
+        #888;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+
+}
+
+
+.property-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        22px;
+
+}
+
+
+.property-card {
+
+    background:
+        #101010;
+
+    border:
+        1px solid #252525;
+
+    overflow:
+        hidden;
+
+    transition:
+        0.4s ease;
+
+}
+
+
+.property-card:hover {
+
+    border-color:
+        var(--gold);
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+.property-image {
+
+    height:
+        300px;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+}
+
+
+.property-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform 0.7s ease;
+
+}
+
+
+.property-card:hover
+.property-image img {
+
+    transform:
+        scale(1.07);
+
+}
+
+
+.property-status {
+
+    position:
+        absolute;
+
+    top:
+        18px;
+
+    left:
+        18px;
+
+    background:
+        var(--gold);
+
+    color:
+        #111;
+
+    padding:
+        8px 12px;
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        1.5px;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.property-details {
+
+    padding:
+        27px;
+
+}
+
+
+.property-type {
+
+    color:
+        var(--gold);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.property-details h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        28px;
+
+    font-weight:
+        500;
+
+    margin:
+        9px 0;
+
+}
+
+
+.property-location {
+
+    color:
+        #777;
+
+    font-size:
+        11px;
+
+}
+
+
+.property-description {
+
+    color:
+        #888;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+
+    margin-top:
+        18px;
+
+}
+
+
+.property-link {
+
+    display:
+        inline-block;
+
+    margin-top:
+        20px;
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        9px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+/* =====================================================
+   PHILOSOPHY
+===================================================== */
+
+.philosophy {
+
+    padding:
+        140px 5%;
+
+    text-align:
+        center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(199,164,91,0.10),
+            transparent 50%
+        );
+
+}
+
+
+.philosophy h2 {
+
+    max-width:
+        1100px;
+
+    margin:
+        auto;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(48px,7vw,100px);
+
+    line-height:
+        0.95;
+
+    font-weight:
+        400;
+
+}
+
+
+.philosophy h2 span {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.philosophy p {
+
+    max-width:
+        650px;
+
+    margin:
+        35px auto 0;
+
+    color:
+        #888;
+
+    line-height:
+        1.9;
+
+    font-size:
+        13px;
+
+}
+
+
+/* =====================================================
+   SELL PROPERTY
+===================================================== */
+
+.sell-section {
+
+    background:
+        #0b0b0b;
+
+}
+
+
+.sell-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap:
+        90px;
+
+    align-items:
+        start;
+
+}
+
+
+.sell-copy {
+
+    position:
+        sticky;
+
+    top:
+        130px;
+
+}
+
+
+.sell-copy p {
+
+    color:
+        #888;
+
+    line-height:
+        1.9;
+
+    font-size:
+        13px;
+
+    margin-top:
+        28px;
+
+}
+
+
+.sell-points {
+
+    margin-top:
+        35px;
+
+}
+
+
+.sell-point {
+
+    display:
+        flex;
+
+    gap:
+        15px;
+
+    padding:
+        17px 0;
+
+    border-bottom:
+        1px solid #222;
+
+}
+
+
+.sell-point-number {
+
+    color:
+        var(--gold);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        23px;
+
+}
+
+
+.sell-point span {
+
+    color:
+        #aaa;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* =====================================================
+   FORMS
+===================================================== */
+
+.form-box {
+
+    background:
+        #101010;
+
+    border:
+        1px solid #262626;
+
+    padding:
+        40px;
+
+}
+
+
+.form-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        34px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.form-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        16px;
+
+}
+
+
+.form-group {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        8px;
+
+}
+
+
+.form-group.full {
+
+    grid-column:
+        1 / -1;
+
+}
+
+
+.form-group label {
+
+    color:
+        #777;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1.5px;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+
+    width:
+        100%;
+
+    background:
+        #080808;
+
+    border:
+        1px solid #292929;
+
+    color:
+        white;
+
+    padding:
+        16px;
+
+    outline:
+        none;
+
+    font-size:
+        11px;
+
+    transition:
+        0.3s;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+
+    border-color:
+        var(--gold);
+
+}
+
+
+.form-group textarea {
+
+    min-height:
+        150px;
+
+    resize:
+        vertical;
+
+}
+
+
+.form-submit {
+
+    margin-top:
+        20px;
+
+}
+
+
+.form-note {
+
+    color:
+        #666;
+
+    font-size:
+        9px;
+
+    line-height:
+        1.7;
+
+    margin-top:
+        15px;
+
+}
+
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.process-section {
+
+    background:
+        var(--black);
+
+}
+
+
+.process-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    margin-top:
+        60px;
+
+}
+
+
+.process {
+
+    padding:
+        35px;
+
+    border-top:
+        1px solid var(--border);
+
+    border-right:
+        1px solid var(--border);
+
+}
+
+
+.process:last-child {
+
+    border-right:
+        none;
+
+}
+
+
+.process-number {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        55px;
+
+    color:
+        var(--gold);
+
+}
+
+
+.process h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        27px;
+
+    margin:
+        14px 0;
+
+}
+
+
+.process p {
+
+    color:
+        #777;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    border-top:
+        1px solid var(--border);
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.stat {
+
+    text-align:
+        center;
+
+    padding:
+        60px 20px;
+
+    border-right:
+        1px solid var(--border);
+
+}
+
+
+.stat:last-child {
+
+    border-right:
+        none;
+
+}
+
+
+.stat-number {
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        55px;
+
+}
+
+
+.stat-label {
+
+    color:
+        #777;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
+
+    margin-top:
+        7px;
+
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-section {
+
+    background:
+        #0a0a0a;
+
+}
+
+
+.contact-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap:
+        90px;
+
+}
+
+
+.contact-info {
+
+    margin-top:
+        40px;
+
+}
+
+
+.contact-detail {
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.contact-detail-label {
+
+    color:
+        var(--gold);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        3px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.contact-detail a,
+.contact-detail p {
+
+    color:
+        #ccc;
+
+    font-size:
+        13px;
+
+}
+
+
+.contact-form {
+
+    display:
+        grid;
+
+    gap:
+        16px;
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.final-cta {
+
+    min-height:
+        540px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    background:
+        linear-gradient(
+            rgba(5,5,5,0.72),
+            rgba(5,5,5,0.92)
+        ),
+        url("assets/cta-property.jpg")
+        center/cover;
+
+}
+
+
+.final-cta h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(48px,6vw,85px);
+
+    line-height:
+        0.95;
+
+    font-weight:
+        400;
+
+}
+
+
+.final-cta h2 span {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.final-cta p {
+
+    max-width:
+        600px;
+
+    margin:
+        25px auto 35px;
+
+    color:
+        #aaa;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background:
+        #050505;
+
+    border-top:
+        1px solid var(--border);
+
+    padding:
+        75px 5% 30px;
+
+}
+
+
+.footer-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.4fr 1fr 1fr 1fr;
+
+    gap:
+        60px;
+
+    padding-bottom:
+        60px;
+
+}
+
+
+.footer-brand p {
+
+    max-width:
+        350px;
+
+    color:
+        #666;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.8;
+
+    margin-top:
+        20px;
+
+}
+
+
+footer h4 {
+
+    color:
+        var(--gold);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+footer ul {
+
+    list-style:
+        none;
+
+}
+
+
+footer li {
+
+    margin-bottom:
+        12px;
+
+}
+
+
+footer li a {
+
+    color:
+        #777;
+
+    font-size:
+        11px;
+
+    transition:
+        0.3s;
+
+}
+
+
+footer li a:hover {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.footer-bottom {
+
+    border-top:
+        1px solid #1c1c1c;
+
+    padding-top:
+        25px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    color:
+        #555;
+
+    font-size:
+        9px;
+
+}
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+.reveal {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+
+}
+
+
+.reveal.active {
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1050px) {
+
+
+    .nav-links {
+
+        position:
+            absolute;
+
+        top:
+            75px;
+
+        left:
+            5%;
+
+        right:
+            5%;
+
+        display:
+            none;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        background:
+            rgba(7,7,7,0.98);
+
+        border:
+            1px solid var(--border);
+
+        padding:
+            25px;
+
+    }
+
+
+    .nav-links.active {
+
+        display:
+            flex;
+
+    }
+
+
+    .menu-button {
+
+        display:
+            block;
+
+    }
+
+
+    .values,
+    .services-grid,
+    .process-grid,
+    .stats {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .about-grid,
+    .sell-grid,
+    .contact-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .sell-copy {
+
+        position:
+            relative;
+
+        top:
+            auto;
+
+    }
+
+
+    .property-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+
+    .section {
+
+        padding:
+            85px 6%;
+
+    }
+
+
+    .logo-symbol {
+
+        font-size:
+            35px;
+
+    }
+
+
+    .logo-name {
+
+        font-size:
+            17px;
+
+        letter-spacing:
+            5px;
+
+    }
+
+
+    .hero {
+
+        min-height:
+            100svh;
+
+    }
+
+
+    .hero-content {
+
+        padding-top:
+            90px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            56px;
+
+    }
+
+
+    .hero-description {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .hero-meta {
+
+        display:
+            none;
+
+    }
+
+
+    .values,
+    .services-grid,
+    .property-grid,
+    .process-grid,
+    .stats,
+    .footer-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .value,
+    .stat,
+    .process {
+
+        border-right:
+            none;
+
+        border-bottom:
+            1px solid var(--border);
+
+    }
+
+
+    .services-heading,
+    .properties-header {
+
+        display:
+            block;
+
+    }
+
+
+    .services-heading p,
+    .properties-intro {
+
+        margin-top:
+            25px;
+
+    }
+
+
+    .about-image {
+
+        min-height:
+            400px;
+
+    }
+
+
+    .form-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .form-group.full {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .form-box {
+
+        padding:
+            25px;
+
+    }
+
+
+    .footer-bottom {
+
+        display:
+            block;
+
+    }
+
+
+    .footer-bottom div {
+
+        margin-bottom:
+            10px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PRELOADER
+===================================================== -->
+
+<div class="preloader" id="preloader">
+
+    <div class="preloader-logo">
+        RAECORP
+    </div>
+
+    <div class="preloader-line"></div>
+
+</div>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="navbar" id="navbar">
+
+    <a href="#home" class="logo">
+
+        <div class="logo-symbol">
+            R
+        </div>
+
+        <div class="logo-name">
+            RAECORP
+        </div>
+
+    </a>
+
+
+    <button
+        class="menu-button"
+        id="menuButton">
+
+        ?
+
+    </button>
+
+
+    <nav
+        class="nav-links"
+        id="navLinks">
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#services">
+            Services
+        </a>
+
+        <a href="#properties">
+            Properties
+        </a>
+
+        <a href="#sell">
+            Sell Your Property
+        </a>
+
+        <a href="#process">
+            Our Process
+        </a>
+
+        <a
+            href="#contact"
+            class="nav-contact">
+
+            Contact
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="hero"
+    id="home">
+
+
+    <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="assets/hero-poster.jpg">
+
+        <source
+            src="assets/hero.mp4"
+            type="video/mp4">
+
+    </video>
+
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-bottom-overlay"></div>
+
+
+    <div class="hero-content reveal">
+
+
+        <div class="eyebrow">
+
+            International Property Solutions
+
+        </div>
+
+
+        <h1>
+
+            Properties
+            <br>
+
+            <span>Connected.</span>
+
+            <br>
+
+            Futures
+            <br>
+
+            Created.
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            RAECORP connects property owners and sellers
+            with a strong international network of qualified
+            buyers and property partners.
+
+            We create safe, diligent and tailored solutions
+            for every property and every person behind it.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#sell"
+                class="btn btn-primary">
+
+                Submit A Property
+
+            </a>
+
+
+            <a
+                href="#services"
+                class="btn btn-outline">
+
+                Explore RAECORP
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-meta">
+
+        <div class="hero-scroll">
+
+            Scroll To Explore
+
+            <div class="scroll-line"></div>
+
+        </div>
+
+
+        <div class="hero-location">
+
+            Global Property Network
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     VALUES
+===================================================== -->
+
+<section class="values">
+
+
+    <div class="value reveal">
+
+        <div class="value-icon">
+            ?
+        </div>
+
+        <h3>
+            Global Reach
+        </h3>
+
+        <p>
+            Connecting property opportunities
+            with international markets.
+        </p>
+
+    </div>
+
+
+    <div class="value reveal">
+
+        <div class="value-icon">
+            ?
+        </div>
+
+        <h3>
+            Diligent Process
+        </h3>
+
+        <p>
+            A careful and structured approach
+            to every property opportunity.
+        </p>
+
+    </div>
+
+
+    <div class="value reveal">
+
+        <div class="value-icon">
+            ?
+        </div>
+
+        <h3>
+            Tailored Solutions
+        </h3>
+
+        <p>
+            Strategies designed around the
+            circumstances of each property.
+        </p>
+
+    </div>
+
+
+    <div class="value reveal">
+
+        <div class="value-icon">
+            ?
+        </div>
+
+        <h3>
+            People First
+        </h3>
+
+        <p>
+            Because every property represents
+            someone's plans, goals and future.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+    class="section about-section"
+    id="about">
+
+
+    <div class="about-grid">
+
+
+        <div class="about-image reveal"></div>
+
+
+        <div class="about-copy reveal">
+
+
+            <div class="section-label">
+
+                About RAECORP
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                More Than Property.
+
+                <span>
+                    We Invest In Possibilities.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                RAECORP is an international property
+                management and solutions company
+                focused on connecting property owners
+                and sellers with a strong database
+                and network of qualified buyers.
+
+            </p>
+
+
+            <p>
+
+                We go beyond simply connecting a buyer
+                and seller. Our approach is centred around
+                understanding the property, understanding
+                the circumstances and identifying a suitable
+                path forward.
+
+            </p>
+
+
+            <p>
+
+                Through diligent property assessment,
+                strategic positioning, buyer connections
+                and transaction support, RAECORP seeks
+                to create outcomes that work for the
+                people behind each property.
+
+            </p>
+
+
+            <div class="quote">
+
+                "We don't just invest in properties.
+                We invest in people's lives."
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section
+    class="section services-section"
+    id="services">
+
+
+    <div class="services-heading reveal">
+
+
+        <div>
+
+            <div class="section-label">
+
+                Our Expertise
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                Comprehensive
+
+                <span>
+                    Property Solutions.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            RAECORP provides a structured pathway
+            for property owners seeking to sell,
+            reposition or explore opportunities
+            for their property.
+
+        </p>
+
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <article class="service reveal">
+
+            <div class="service-content">
+
+                <div class="service-number">
+                    01 / PROPERTY
+                </div>
+
+                <h3>
+                    Property Marketing
+                </h3>
+
+                <p>
+
+                    Positioning selected properties
+                    for exposure to suitable qualified
+                    property networks and potential
+                    purchasers.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="service reveal">
+
+            <div class="service-content">
+
+                <div class="service-number">
+                    02 / CONNECTION
+                </div>
+
+                <h3>
+                    Property Sourcing
+                </h3>
+
+                <p>
+
+                    Identifying opportunities and
+                    connecting property owners with
+                    relevant parties within our network.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="service reveal">
+
+            <div class="service-content">
+
+                <div class="service-number">
+                    03 / TRANSACTION
+                </div>
+
+                <h3>
+                    Transaction Support
+                </h3>
+
+                <p>
+
+                    Supporting communication and
+                    coordination throughout the
+                    property transaction journey.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="service reveal">
+
+            <div class="service-content">
+
+                <div class="service-number">
+                    04 / STRATEGY
+                </div>
+
+                <h3>
+                    Property Advisory
+                </h3>
+
+                <p>
+
+                    Helping owners understand potential
+                    pathways and identify suitable
+                    strategies for their property.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROPERTIES
+===================================================== -->
+
+<section
+    class="section properties"
+    id="properties">
+
+
+    <div class="properties-header reveal">
+
+
+        <div>
+
+            <div class="section-label">
+
+                Property Opportunities
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                Selected
+
+                <span>
+                    Opportunities.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <p class="properties-intro">
+
+            Explore selected property opportunities
+            represented through the RAECORP network.
+
+            Property details are subject to availability,
+            verification and due diligence.
+
+        </p>
+
+    </div>
+
+
+    <div class="property-grid">
+
+
+        <!-- PROPERTY 01 -->
+
+        <article class="property-card reveal">
+
+
+            <div class="property-image">
+
+                <img
+                    src="assets/property-1.jpg"
+                    alt="Luxury coastal property">
+
+                <div class="property-status">
+
+                    Featured Opportunity
+
+                </div>
+
+            </div>
+
+
+            <div class="property-details">
+
+
+                <div class="property-type">
+
+                    Residential
+
+                </div>
+
+
+                <h3>
+                    Coastal Residence
+                </h3>
+
+
+                <div class="property-location">
+
+                    International · Private Listing
+
+                </div>
+
+
+                <p class="property-description">
+
+                    A premium residential opportunity
+                    positioned within an exclusive
+                    coastal environment.
+
+                </p>
+
+
+                <a
+                    href="#contact"
+                    class="property-link">
+
+                    Request Information ?
+
+                </a>
+
+
+            </div>
+
+        </article>
+
+
+        <!-- PROPERTY 02 -->
+
+        <article class="property-card reveal">
+
+
+            <div class="property-image">
+
+                <img
+                    src="assets/property-2.jpg"
+                    alt="Luxury city property">
+
+                <div class="property-status">
+
+                    Off-Market
+
+                </div>
+
+            </div>
+
+
+            <div class="property-details">
+
+
+                <div class="property-type">
+
+                    Commercial
+
+                </div>
+
+
+                <h3>
+                    Urban Investment Asset
+                </h3>
+
+
+                <div class="property-location">
+
+                    International · Private Listing
+
+                </div>
+
+
+                <p class="property-description">
+
+                    A strategically positioned
+                    commercial property opportunity
+                    available through private enquiry.
+
+                </p>
+
+
+                <a
+                    href="#contact"
+                    class="property-link">
+
+                    Request Information ?
+
+                </a>
+
+
+            </div>
+
+        </article>
+
+
+        <!-- PROPERTY 03 -->
+
+        <article class="property-card reveal">
+
+
+            <div class="property-image">
+
+                <img
+                    src="assets/property-3.jpg"
+                    alt="Luxury villa">
+
+                <div class="property-status">
+
+                    Private Opportunity
+
+                </div>
+
+            </div>
+
+
+            <div class="property-details">
+
+
+                <div class="property-type">
+
+                    Luxury Residential
+
+                </div>
+
+
+                <h3>
+                    Private Villa Estate
+                </h3>
+
+
+                <div class="property-location">
+
+                    International · Private Listing
+
+                </div>
+
+
+                <p class="property-description">
+
+                    A high-end private residence
+                    presented through the RAECORP
+                    property network.
+
+                </p>
+
+
+                <a
+                    href="#contact"
+                    class="property-link">
+
+                    Request Information ?
+
+                </a>
+
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     PHILOSOPHY
+===================================================== -->
+
+<section class="philosophy">
+
+
+    <div class="section-label reveal">
+
+        The RAECORP Philosophy
+
+    </div>
+
+
+    <h2 class="reveal">
+
+        Every Property Has A Story.
+
+        <span>
+            Every Owner Has A Reason.
+        </span>
+
+    </h2>
+
+
+    <p class="reveal">
+
+        Our responsibility is to understand both.
+
+        Property is more than an asset. It can represent
+        a lifetime of work, a family legacy, a business
+        decision or the next chapter of someone's life.
+
+        That's why we approach every opportunity with
+        diligence, discretion and a people-first mindset.
+
+    </p>
+
+
+</section>
+
+
+<!-- =====================================================
+     SELL YOUR PROPERTY
+===================================================== -->
+
+<section
+    class="section sell-section"
+    id="sell">
+
+
+    <div class="sell-grid">
+
+
+        <div class="sell-copy reveal">
+
+
+            <div class="section-label">
+
+                Sell Your Property
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                Your Property.
+
+                <span>
+                    Our Network.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                If you are considering selling a property,
+                RAECORP can assess your opportunity and
+                determine whether it may be suitable for
+                our international property network.
+
+            </p>
+
+
+            <p>
+
+                Submit your details below and provide
+                as much information as possible.
+
+                Our team can then review the opportunity
+                and contact you regarding the appropriate
+                next steps.
+
+            </p>
+
+
+            <div class="sell-points">
+
+
+                <div class="sell-point">
+
+                    <div class="sell-point-number">
+                        01
+                    </div>
+
+                    <span>
+                        Property information review
+                    </span>
+
+                </div>
+
+
+                <div class="sell-point">
+
+                    <div class="sell-point-number">
+                        02
+                    </div>
+
+                    <span>
+                        Opportunity assessment
+                    </span>
+
+                </div>
+
+
+                <div class="sell-point">
+
+                    <div class="sell-point-number">
+                        03
+                    </div>
+
+                    <span>
+                        Network positioning
+                    </span>
+
+                </div>
+
+
+                <div class="sell-point">
+
+                    <div class="sell-point-number">
+                        04
+                    </div>
+
+                    <span>
+                        Buyer connection & transaction support
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- PROPERTY SUBMISSION FORM -->
+
+        <div class="form-box reveal">
+
+
+            <div class="form-title">
+
+                Submit A Property
+
+            </div>
+
+
+            <form
+                action="https://formsubmit.co/raetechsystem@gmail.com"
+                method="POST">
+
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="RAECORP - New Property Submission">
+
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false">
+
+
+                <input
+                    type="hidden"
+                    name="_template"
+                    value="table">
+
+
+                <input
+                    type="hidden"
+                    name="_next"
+                    value="https://yourdomain.com/#sell">
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            name="Full Name"
+                            placeholder="Your full name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            name="Email"
+                            placeholder="Your email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            name="Phone"
+                            placeholder="Phone number">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Country
+                        </label>
+
+                        <input
+                            type="text"
+                            name="Country"
+                            placeholder="Property country">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Property Type
+                        </label>
+
+                        <select
+                            name="Property Type">
+
+                            <option value="">
+                                Select type
+                            </option>
+
+                            <option>
+                                Residential
+                            </option>
+
+                            <option>
+                                Luxury Residential
+                            </option>
+
+                            <option>
+                                Commercial
+                            </option>
+
+                            <option>
+                                Development Land
+                            </option>
+
+                            <option>
+                                Hospitality
+                            </option>
+
+                            <option>
+                                Industrial
+                            </option>
+
+                            <option>
+                                Agricultural
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Approximate Value
+                        </label>
+
+                        <input
+                            type="text"
+                            name="Approximate Value"
+                            placeholder="Optional">
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Property Address / Location
+                        </label>
+
+                        <input
+                            type="text"
+                            name="Property Location"
+                            placeholder="Property address or location">
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Tell Us About The Property
+                        </label>
+
+                        <textarea
+                            name="Property Description"
+                            placeholder="Property details, circumstances, desired outcome, timeline, etc."
+                            required></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-submit">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        Submit Property ?
+
+                    </button>
+
+                </div>
+
+
+                <p class="form-note">
+
+                    Submitting information does not constitute
+                    a property valuation, offer or guarantee
+                    of sale. All opportunities remain subject
+                    to review, verification and appropriate
+                    due diligence.
+
+                </p>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+
+<section
+    class="section process-section"
+    id="process">
+
+
+    <div class="section-label reveal">
+
+        Our Process
+
+    </div>
+
+
+    <h2 class="section-title reveal">
+
+        From Opportunity
+
+        <span>
+            To Outcome.
+        </span>
+
+    </h2>
+
+
+    <div class="process-grid">
+
+
+        <div class="process reveal">
+
+            <div class="process-number">
+                01
+            </div>
+
+            <h3>
+                Understand
+            </h3>
+
+            <p>
+
+                We learn about the property,
+                the owner's objectives, the
+                circumstances and desired outcome.
+
+            </p>
+
+        </div>
+
+
+        <div class="process reveal">
+
+            <div class="process-number">
+                02
+            </div>
+
+            <h3>
+                Assess
+            </h3>
+
+            <p>
+
+                We review the opportunity and
+                determine the most appropriate
+                pathway for positioning the property.
+
+            </p>
+
+        </div>
+
+
+        <div class="process reveal">
+
+            <div class="process-number">
+                03
+            </div>
+
+            <h3>
+                Connect
+            </h3>
+
+            <p>
+
+                Suitable property opportunities
+                are introduced to relevant parties
+                within our network.
+
+            </p>
+
+        </div>
+
+
+        <div class="process reveal">
+
+            <div class="process-number">
+                04
+            </div>
+
+            <h3>
+                Facilitate
+            </h3>
+
+            <p>
+
+                We support communication,
+                coordination and diligence throughout
+                the transaction process.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="stats">
+
+
+    <div class="stat reveal">
+
+        <div
+            class="stat-number counter"
+            data-target="50">
+
+            0
+
+        </div>
+
+        <div class="stat-label">
+
+            Global Connections
+
+        </div>
+
+    </div>
+
+
+    <div class="stat reveal">
+
+        <div
+            class="stat-number counter"
+            data-target="100">
+
+            0
+
+        </div>
+
+        <div class="stat-label">
+
+            People First
+
+        </div>
+
+    </div>
+
+
+    <div class="stat reveal">
+
+        <div class="stat-number">
+
+            Global
+
+        </div>
+
+        <div class="stat-label">
+
+            Property Focus
+
+        </div>
+
+    </div>
+
+
+    <div class="stat reveal">
+
+        <div class="stat-number">
+
+            24/7
+
+        </div>
+
+        <div class="stat-label">
+
+            International Reach
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="final-cta">
+
+
+    <div class="reveal">
+
+
+        <div class="section-label">
+
+            Your Next Property Decision
+
+        </div>
+
+
+        <h2>
+
+            Let's Find The
+
+            <span>
+                Right Outcome.
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            Whether you are looking to sell,
+            reposition or explore a new direction
+            for your property, start the conversation
+            with RAECORP.
+
+        </p>
+
+
+        <a
+            href="#contact"
+            class="btn btn-primary">
+
+            Speak With RAECORP
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+    class="section contact-section"
+    id="contact">
+
+
+    <div class="contact-grid">
+
+
+        <div class="reveal">
+
+
+            <div class="section-label">
+
+                Contact RAECORP
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                Start A
+
+                <span>
+                    Conversation.
+                </span>
+
+            </h2>
+
+
+            <div class="contact-info">
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-detail-label">
+
+                        Email
+
+                    </div>
+
+                    <a href="mailto:raetechsystem@gmail.com">
+
+                        raetechsystem@gmail.com
+
+                    </a>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-detail-label">
+
+                        Operations
+
+                    </div>
+
+                    <p>
+
+                        International Property Network
+
+                    </p>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-detail-label">
+
+                        Enquiries
+
+                    </div>
+
+                    <p>
+
+                        Property owners · Sellers ·
+                        Property partners
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="form-box reveal">
+
+
+            <div class="form-title">
+
+                Contact RAECORP
+
+            </div>
+
+
+            <form
+                class="contact-form"
+                action="https://formsubmit.co/raetechsystem@gmail.com"
+                method="POST">
+
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="RAECORP Website Enquiry">
+
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false">
+
+
+                <input
+                    type="hidden"
+                    name="_template"
+                    value="table">
+
+
+                <input
+                    type="hidden"
+                    name="_next"
+                    value="https://yourdomain.com/#contact">
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            name="Name"
+                            placeholder="Full name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            name="Email"
+                            placeholder="Email address"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            name="Phone"
+                            placeholder="Phone number">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Enquiry
+
+                        </label>
+
+                        <select name="Enquiry Type">
+
+                            <option>
+                                General enquiry
+                            </option>
+
+                            <option>
+                                Sell a property
+                            </option>
+
+                            <option>
+                                Property opportunity
+                            </option>
+
+                            <option>
+                                Partnership
+                            </option>
+
+                            <option>
+                                Other
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Message
+                        </label>
+
+                        <textarea
+                            name="Message"
+                            placeholder="How can RAECORP assist you?"
+                            required></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-submit">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        Send Enquiry ?
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+
+            <a
+                href="#home"
+                class="logo">
+
+                <div class="logo-symbol">
+                    R
+                </div>
+
+                <div class="logo-name">
+                    RAECORP
+                </div>
+
+            </a>
+
+
+            <p>
+
+                International property solutions
+                built around people, opportunities
+                and suitable outcomes.
+
+            </p>
+
+
+        </div>
+
+
+        <div>
+
+
+            <h4>
+                Explore
+            </h4>
+
+
+            <ul>
+
+                <li>
+                    <a href="#about">
+                        About RAECORP
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#properties">
+                        Properties
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#process">
+                        Our Process
+                    </a>
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+        <div>
+
+
+            <h4>
+                Property
+            </h4>
+
+
+            <ul>
+
+                <li>
+                    <a href="#sell">
+                        Sell Your Property
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#properties">
+                        Property Opportunities
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Property Enquiry
+                    </a>
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+        <div>
+
+
+            <h4>
+                Contact
+            </h4>
+
+
+            <ul>
+
+                <li>
+
+                    <a href="mailto:raetechsystem@gmail.com">
+
+                        raetechsystem@gmail.com
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#sell">
+
+                        Submit A Property
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#contact">
+
+                        General Enquiry
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+
+        <div>
+
+            © 2026 RAECORP.
+            All Rights Reserved.
+
+        </div>
+
+
+        <div>
+
+            International Property Solutions
+
+        </div>
+
+
+    </div>
+
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   PRELOADER
+===================================================== */
+
+window.addEventListener("load", function() {
+
+    const preloader =
+        document.getElementById("preloader");
+
+    setTimeout(function() {
+
+        preloader.classList.add("hidden");
+
+    }, 800);
+
+});
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+const navbar =
+    document.getElementById("navbar");
+
+
+window.addEventListener("scroll", function() {
+
+    if (window.scrollY > 60) {
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+menuButton.addEventListener("click", function() {
+
+    navLinks.classList.toggle("active");
+
+});
+
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+    new IntersectionObserver(
+
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("active");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+revealElements.forEach(function(element) {
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =====================================================
+   COUNTERS
+===================================================== */
+
+const counters =
+    document.querySelectorAll(".counter");
+
+
+let countersStarted = false;
+
+
+function startCounters() {
+
+    if (countersStarted) {
+
+        return;
+
+    }
+
+
+    countersStarted = true;
+
+
+    counters.forEach(function(counter) {
+
+        const target =
+            Number(counter.dataset.target);
+
+        let current = 0;
+
+
+        const increment =
+            Math.max(
+                1,
+                Math.ceil(target / 80)
+            );
+
+
+        function update() {
+
+            current += increment;
+
+
+            if (current >= target) {
+
+                counter.textContent =
+                    target.toLocaleString() + "+";
+
+                return;
+
+            }
+
+
+            counter.textContent =
+                current.toLocaleString();
+
+
+            requestAnimationFrame(update);
+
+        }
+
+
+        update();
+
+    });
+
+}
+
+
+const stats =
+    document.querySelector(".stats");
+
+
+const statsObserver =
+    new IntersectionObserver(
+
+        function(entries) {
+
+            if (
+                entries[0].isIntersecting
+            ) {
+
+                startCounters();
+
+            }
+
+        },
+
+        {
+            threshold: 0.4
+        }
+
+    );
+
+
+statsObserver.observe(stats);
+
+
+/* =====================================================
+   VIDEO FALLBACK
+===================================================== */
+
+const heroVideo =
+    document.querySelector(".hero-video");
+
+
+heroVideo.addEventListener(
+    "error",
+    function() {
+
+        heroVideo.style.display =
+            "none";
+
+    }
+);
+
+
+/* =====================================================
+   CONTACT FORM SUCCESS MESSAGE
+===================================================== */
+
+document
+    .querySelectorAll("form")
+    .forEach(function(form) {
+
+        form.addEventListener(
+            "submit",
+            function() {
+
+                const button =
+                    form.querySelector(
+                        "button[type='submit']"
+                    );
+
+
+                if (button) {
+
+                    button.innerText =
+                        "Sending...";
+
+                }
+
+            }
+        );
+
+    });
+
+
+</script>
+
+
+</body>
+
+</html>
